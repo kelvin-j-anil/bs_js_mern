@@ -1,0 +1,42 @@
+.container-fluid{
+    padding: 0px;
+    display: grid;
+    max-width: 100%;
+    width: 100%;
+}
+.mainrow{
+    background-color: rgb(30, 239, 239);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.second{
+    background-color: rgb(190, 187, 187);
+    color:white;
+    padding:10px 10px 10px 20px;
+    text-decoration: none;
+
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.content::placeholder::selection{
+    text-align: center;
+    background-color: white;
+    height: 473px;
+    padding: 20px;
+    border-color: white;
+}
+.sidebar{
+    background-color: grey;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+}
+#input{
+    text-align: center;
+}
+#input:focus{
+    outline: none;
+}

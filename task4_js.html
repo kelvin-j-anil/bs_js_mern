@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js4</title>
+</head>
+<body>
+    <h1>Date and Time Display</h1>
+
+    <!-- Button to Display Date -->
+    <button onclick="showDate()">Show Date</button>
+    <p id="dateOutput"></p>
+
+    <!-- Button to Display Time -->
+    <button onclick="showTime()">Show Time</button>
+    <p id="timeOutput"></p>
+
+    <script>
+        function showDate() {
+            const currentDate = new Date();
+            const day = currentDate.getDate();
+            const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const month = monthNames[currentDate.getMonth()];
+            const year = currentDate.getFullYear();
+
+            const formattedDate = `${day}/${month}/${year}`;
+            document.getElementById("dateOutput").textContent = formattedDate;
+        }
+
+       
+        function showTime() {
+            const currentTime = new Date();
+            document.getElementById("timeOutput").textContent = currentTime.toString();
+        }
+    </script>
+</body>
+</html>

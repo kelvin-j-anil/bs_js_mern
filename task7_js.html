@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js7</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .moving-image {
+            position: absolute;
+            margin-top:50px;
+            width: 300px;
+            height: 200px;
+            background-image: url('/train-1.png'); 
+            background-size: 300px;
+            animation: moveImage 4s linear infinite;
+            left: -100px; 
+        }
+
+        @keyframes moveImage {
+            0% {
+                left: -100px;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: rgb(216, 213, 213);
+            border: none;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="image-container">
+        <div class="moving-image"></div>
+    </div>
+    <h1 style="color: #055082;">Click the following button to handle animation</h1>
+    <div class="button-container">
+        <button id="startButton">Start</button>
+        <button id="stopButton">Stop</button>
+    </div>
+
+    <script>
+        const movingImage = document.querySelector('.moving-image');
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+        let animationPaused = false;
+
+        startButton.addEventListener('click', () => {
+            if (animationPaused) {
+                movingImage.style.animationPlayState = 'running';
+                animationPaused = false;
+            }
+        });
+
+        stopButton.addEventListener('click', () => {
+            if (!animationPaused) {
+                movingImage.style.animationPlayState = 'paused';
+                animationPaused = true;
+            }
+        });
+    </script>
+</body>
+</html>

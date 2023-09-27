@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js5</title>
+    <style>
+        .error-message {
+            color: red;
+        }
+
+        .error-input {
+            border: 2px solid red;
+        }
+        .form-control{
+            padding:5px;
+            margin-left: 320px;
+            margin-top:50px;
+        }
+        #msg{
+            margin-top:20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="contactForm">
+        <div class="form-control">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <span class="error-message" id="nameError"></span>
+        </div>
+        <div class="form-control">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span class="error-message" id="emailError"></span>
+        </div>
+        <div class="form-control">
+            <label for="website">Website:</label>
+            <input type="text" id="website" name="website">
+            <span class="error-message" id="websiteError"></span>
+        </div>
+        <div class="form-control">
+            <label for="message" id="msg">Message:</label>
+            <textarea id="message" name="message" rows="5" cols="50"></textarea>
+            <span class="error-message" id="messageError"></span>
+        </div>
+        <div class="form-control"><button type="submit">Submit</button></div>
+        
+    </form>
+
+    <script>
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', function (e) {
+            let isValid = true;
+
+            
+            document.getElementById('nameError').textContent = '';
+            document.getElementById('emailError').textContent = '';
+            document.getElementById('websiteError').textContent = '';
+            document.getElementById('messageError').textContent = '';
+
+            const nameInput = contactForm['name'];
+            const emailInput = contactForm['email'];
+            const websiteInput = contactForm['website'];
+            const messageInput = contactForm['message'];
+
+            // Validate name
+            const name = nameInput.value;
+            if (name.trim() === '') {
+                isValid = false;
+                document.getElementById('nameError').textContent = 'This field is required';
+                nameInput.classList.add('error-input');
+            } else {
+                nameInput.classList.remove('error-input');
+            }
+
+            // Validate email
+            const email = emailInput.value;
+            if (email.trim() === '') {
+                isValid = false;
+                document.getElementById('emailError').textContent = 'A valid Email address is required';
+                emailInput.classList.add('error-input');
+            } else {
+                emailInput.classList.remove('error-input');
+            }
+
+            
+            const website = websiteInput.value;
+            if (website.trim() === '') {
+                isValid = false;
+                document.getElementById('websiteError').textContent = 'A valid url is required';
+                websiteInput.classList.add('error-input');
+            } else {
+                websiteInput.classList.remove('error-input');
+            }
+
+            // Validate message
+            const message = messageInput.value;
+            if (message.trim() === '') {
+                isValid = false;
+                document.getElementById('messageError').textContent = 'This field is required';
+                messageInput.classList.add('error-input');
+            } else {
+                messageInput.classList.remove('error-input');
+            }
+
+            if (!isValid) {
+                e.preventDefault(); 
+            }
+        });
+    </script>
+</body>
+</html>

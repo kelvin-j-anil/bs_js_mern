@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js6</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    border:1px solid black;
+    margin-top:20px;
+    background-color: rgb(234, 232, 232);
+}
+
+header {
+    background-color: rgb(234, 232, 232);
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #262626;
+    font-size: 2rem;
+    background-color: rgb(234, 232, 232);
+    font-style: italic;
+}
+
+.login-form {
+    background-color: rgb(234, 232, 232);
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #c9c4c4;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+i{
+    margin-left:8px;
+}
+
+.input-group label {
+    margin-right: 10px;
+    color: #262626;
+}
+
+.input-group input {
+    border: none;
+    /* outline: none; */
+    max-width: 100%;
+    width: 100%;
+    height: 40px;
+    padding:2px;
+
+}
+
+button {
+    background-color: #0095f6;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.divider .line {
+    flex-grow: 1;
+    background-color: #dbdbdb;
+    height: 1px;
+    margin: 0 10px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    color: #262626;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    text-decoration: none;
+    color: #0095f6;
+}
+
+.signup-section p {
+    margin-top: 20px;
+    color: #262626;
+}
+
+.signup-section a {
+    text-decoration: none;
+    color: #0095f6;
+}
+.input-group.error small{
+    visibility: visible;
+    color: red;
+}
+.input-group small{
+    visibility: hidden;
+    margin-left: -102px;
+    position: relative;
+    top:28px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h2>Instagram</h2>
+            </div>
+        </header>
+        <div class="login-form">
+            <form action="#" method="post" id="form">
+                <div class="input-group">
+                    <label for="username"><i class="fas fa-user"></i></label>
+                    <input type="text" id="Username" name="username" placeholder="Username">
+                <div><small>username is required</small></div>
+                </div>
+                <div class="input-group">
+                    <label for="password"><i class="fas fa-lock"></i></label>
+                    <input type="password" id="Password" name="password" placeholder="Password">
+                    <div><small>password is required</small></div>
+                </div>
+                <button type="submit">Log In</button>
+            </form>
+            <div class="divider">
+                <span class="line"></span>
+                <span class="or">OR</span>
+                <span class="line"></span>
+            </div>
+            <div class="options">
+                <label class="remember-me"><input type="checkbox" name="remember"> Remember Me</label>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+        </div>
+        <div class="signup-section">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+
+    <script>
+            
+    document.addEventListener('DOMContentLoaded',function(){
+    const form = document.getElementById('form');
+    const usernameInput = document.getElementById('Username');
+    const passwordInput = document.getElementById('Password');
+
+
+form.addEventListener('submit',function(e){
+    e.preventDefault();
+    let A = false;
+    let B = false;
+
+    const usernamevalue = usernameInput.value.trim();
+    const passwordvalue = passwordInput.value.trim();
+
+    if(usernamevalue === '')
+    {
+        usernameInput.closest('.input-group').classList.add('error');
+    }
+    else
+    {
+        usernameInput.closest('.input-group').classList.remove('error');
+        A = true;
+    }
+
+    if(passwordvalue === '')
+    {
+        passwordInput.closest('.input-group').classList.add('error');
+    }
+    else
+    {
+        passwordInput.closest('.input-group').classList.remove('error');
+        B = true;
+    }
+    if(A==true && B==true)
+    {
+        window.location.href="https://www.google.com"
+    }
+});
+});
+        
+    </script>
+</body>
+</html>

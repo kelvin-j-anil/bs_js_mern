@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>js3</title>
+    <style>
+        #mult{
+            border:2px solid rgb(6, 162, 228);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Math Calculator</h1>
+    <form>
+        <label for="num1">Enter the first number: </label>
+        <input type="number" id="num1" name="num1"><br><br>
+
+        <label for="num2">Enter the second number: </label>
+        <input type="number" id="num2" name="num2"><br><br>
+
+        <button type="button" id="mult" onclick="multiplyNumbers()" >Multiply</button>
+        <button type="button" onclick="divideNumbers()">Divide</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function multiplyNumbers() {
+            calculate('multiply');
+        }
+
+        function divideNumbers() {
+            calculate('divide');
+        }
+
+        function calculate(operation) {
+            // Get the values of the input fields
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+
+            // Check if both inputs are valid numbers
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').textContent = 'Please enter valid numbers.';
+            } else {
+                // Perform the calculation based on the operation
+                let result;
+                if (operation === 'multiply') {
+                    result = num1 * num2;
+                } else if (operation === 'divide') {
+                    if (num2 === 0) {
+                        result = 'Division by zero is not allowed.';
+                    } else {
+                        result = num1 / num2;
+                    }
+                }
+
+                // Display the result in a new line
+                document.getElementById('result').innerHTML = `Result:<br>${result}`;
+            }
+        }
+    </script>
+</body>
+</html>

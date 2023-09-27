@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewpoint" content="width=device-width,intial-scale 1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./task5_bootstrap.css">
+        <title>bs5</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <form id="form" action="https://www.google.com" method="get">
+            <div class="col-lg-8 col-md-10  registration-form">
+                <!-- First Name-->
+            <div class="row"> 
+                <div class="LM">
+                    <div class="categories">
+                       
+                <label for="First-Name"><strong>First Name</strong> </div><span id="emoji"><i class="fas fa-user icon"></i><label>
+                <input type="text" id="First-Name" Placeholder="First Name"></span>
+                <i class="fas fa-circle-xmark"></i>
+                <small id="small">Please supply your first name</small>
+                </div>
+            </div>
+
+            <!-- Last Name-->
+            <div class="row"> 
+                <div class="LM">
+                    <div class="categories">
+                <label for="Last-Name "><strong>Last Name</strong>  </div><span id="emoji"><i class="fas fa-user icon"></i> </label>
+                <input type="text" id="Last-Name" Placeholder="last Name"></span>
+                <i class="fas fa-circle-xmark "></i>
+                <small id="small">Please supply your last name</small>
+                </div>
+            </div>
+
+            <!--Email -->
+            <div class="row"> 
+                <div class="LM">
+                    <div class="categories ">
+                <label for="E-Mail"><strong>E-Mail</strong>  </div><span id="emoji"><i class="fas fa-envelope icon"></i></label>
+                <input type="email" id="E-Mail" Placeholder="E-Mail Address"></span>
+                <i class="fas fa-circle-xmark "></i>
+                <small id="small">Please supply your email</small>
+                </div>
+            </div>
+
+            <!--Phone-->
+            <div class="row"> 
+                <div class="LM">
+                    <div class="categories">
+                <label for="Phone#"><strong>Phone# </strong></div><span id="emoji"><i class="fas fa-duotone fa-phone"></i></label>
+                <input type="tel" id="Phone#" Placeholder="(845)555-1212"></span>
+                <i class="fas fa-circle-xmark "></i>
+                <small id="small">Please supply your phone</small>
+                </div>
+            </div>
+
+            <!--Address-->
+            <div class="row"> 
+                <div class="LM">
+                    <div class="categories">
+                <label for="Address"><strong>Address</strong> </div><span id="emoji"><i class="fas fa-duotone fa-house"></i></label>
+                
+                <input type="text" id="Address" Placeholder="Address"></span>
+                <i class="fas fa-circle-xmark "></i>
+                <small id="small">Please supply your address </small>
+                </div>
+            </div>
+
+            <!--City-->
+            <div class="row"> 
+                <div class="LM">
+                    <div class="categories ">
+                <label for="City"><strong>City </strong></div><span id="emoji"><i class="fas fa-duotone fa-house"></i></label>
+                <input type="text" id="City" Placeholder="city"></span>
+                <i class="fas fa-circle-xmark "></i>
+                <small id="small">Please supply your city</small>
+                </div>
+            </div>
+
+            <!--State-->
+            <div class="row"> 
+                <div class="LM">
+                    <div class="categories">
+                <label for="state"><strong>State </strong></div><span id="emoji"><i class="fas fa-duatone fa-list"></i></label>
+                <select name="state" id="state"></span>
+                    <option value=""disabled selected>Please select your state</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Tamil-Nadu">Tamil Nadu</option>
+                    <option value="Andhra">Andhra</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Telengana">Telengana</option>
+                    <option value="Others">Others</option>
+                </select>
+                </div>
+            </div>
+
+            <!--Hosting-->
+            <div class="row"> 
+                <div class="LM ">
+                    <div class="categories">
+                    <label for="hosting"><strong>Do you have hosting?</strong></div><span id="emoji"></label>
+                     <input type="radio" id="Yes" name="hosting" value="Yes">
+                        <label for="Yes"><div>Yes</div></label>
+
+                     
+                    <input type="radio" id="No" name="hosting" value="No">
+                    
+                        <label for="No"><div>No</div></label>
+                     
+                </span>
+                </div>
+            </div>
+
+            <!--Project Description-->
+            <div class="row">
+                <div class="LM">
+                    <div class="categories">
+                    <label for="Project"><strong>Project Description </strong></div><span id="emoji"><i class="fas fa-duatone fa-pen fapen"></i></label>
+                    <textarea name="Project" id="Project" cols="30" rows="2" placeholder="Project Description"></textarea>
+                </span>
+                </div> 
+            </div>
+
+            <!--Send-->
+            <div class="row">
+                
+                    <button type="submit" id ="send" value="submit">
+                        <div>Send<i class="fas fa-duotone fa-paper-plane sendplane"></i></div>
+                    </button>
+                
+            </div>
+
+
+        
+        </div>
+        </form>
+        
+         <script>
+         document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('form');
+            const firstNameInput = document.getElementById('First-Name');
+            const lastNameInput = document.getElementById('Last-Name');
+            const emailInput = document.getElementById('E-Mail');
+            const phoneInput = document.getElementById('Phone#');
+            const addressInput = document.getElementById('Address');
+            const cityInput = document.getElementById('City')
+        
+            
+        
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                
+                  
+                let A = false;
+                let B = false;
+                let C = false;
+                let D = false;
+                let E = false;
+                let F = false;
+
+                const firstNameValue = firstNameInput.value.trim();
+                const lastNameValue = lastNameInput.value.trim();
+                const emailValue = emailInput.value.trim();
+                const phoneValue = phoneInput.value.trim();
+                const addressValue = addressInput.value.trim();
+                const cityValue = cityInput.value.trim();
+              
+
+                if (firstNameValue === '') {
+                    firstNameInput.closest('.LM').classList.add('error');
+                } else {
+                    firstNameInput.closest('.LM').classList.remove('error');
+                    A = true;
+                }
+                
+                if (lastNameValue === '') {
+                    lastNameInput.closest('.LM').classList.add('error');
+                } else {
+                    lastNameInput.closest('.LM').classList.remove('error');
+                    B = true;
+                }
+
+                if (emailValue=== '') {
+                    emailInput.closest('.LM').classList.add('error');
+                } else {
+                    emailInput.closest('.LM').classList.remove('error');
+                    C = true;
+                }
+
+                if (phoneValue=== '') {
+                    phoneInput.closest('.LM').classList.add('error');
+                } else {
+                    phoneInput.closest('.LM').classList.remove('error');
+                    D = true;
+                }
+
+                if (addressValue=== '') {
+                    addressInput.closest('.LM').classList.add('error');
+                } else {
+                    addressInput.closest('.LM').classList.remove('error');
+                    E = true;
+                }
+
+                if (cityValue=== '') {
+                    cityInput.closest('.LM').classList.add('error');
+                } else {
+                    cityInput.closest('.LM').classList.remove('error');
+                    F= true;
+                }
+                
+        
+                if (A === true && B === true && C == true && D == true && E == true && F == true) {
+                    window.location.href = "https://www.google.com";
+                }
+            });
+        });
+    </script>        
+
+   
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>
+</html>

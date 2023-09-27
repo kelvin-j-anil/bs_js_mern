@@ -1,0 +1,25 @@
+
+        body{
+            background: radial-gradient(circle at 82.8% 5.3%, rgb(255, 237, 216) 0%, rgb(255, 208, 253) 90%);
+        }
+
+    table textarea{
+     box-sizing: border-box;
+     width: 100%;
+    }
+    table td span{
+     color: red;
+    }
+    table td button{
+     background-color: red;
+     color: white;
+     border-radius: 10px;
+    }
+       table input[type=number],input[type=text],input[type=password],input[type=email]{
+        width:100%;
+        box-sizing: border-box;
+       }
+       table td p{
+        text-align: right;
+       }
+      

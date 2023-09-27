@@ -1,0 +1,87 @@
+/* .row{
+    padding-top:2px;
+} */
+.registration-form{
+    background-color: rgb(215, 210, 210);
+    margin:50px 180px 8px 300px;
+    padding-left: 32px;
+    /* padding-top:10px; */
+}
+
+#emoji{
+    position:relative;
+    margin-left:302px;
+    margin-top:-29px;
+    margin-right:0px;
+    display:flex;
+    
+}
+#send{
+    height: fit-content;
+    width: fit-content;
+     margin-top:12px;
+    margin-left:200px;
+    margin: 12px 200px 25px 300px;
+    box-shadow: 1px 1px 1px black,-1px -1px -1px black;
+    background-color: rgb(228, 175, 77);
+    color: white;
+}
+.LM{
+    padding:12px;
+}
+.fas.fa-circle-xmark{
+    position:relative;
+    left:600px;
+    top:-28px;
+    visibility: hidden;
+}
+.fas{
+    margin-top:1px;
+    margin-right:0px;
+    padding: 5px 6px 0px 7px;
+    border:1px solid grey;
+    border-top-left-radius:5px;
+    border-bottom-left-radius: 5px;
+    color: rgb(83, 79, 79);
+}
+.LM.error input{
+    border:3px solid red;
+}
+.LM.error .fas.fa-circle-xmark{
+    color: red;
+    border:none;
+    visibility: visible;
+}
+.LM.error i{
+    color:red;
+    font-display: red;
+}
+.LM.error label{
+    color: red;
+}
+.categories{
+    margin-left:10px;
+}
+
+input:not([name="hosting"]){
+    width:300px;
+    display: absolute;
+}
+.sendplane{
+    border:none;
+    color: white;
+    height:fit-content ;
+    width: fit-content;
+}
+.fapen{
+    padding-top:12px;
+}
+#small{
+    position:absolute;
+    left:650px;
+    color:red;
+    visibility:hidden;
+}
+.LM.error #small{
+    visibility: visible;
+}

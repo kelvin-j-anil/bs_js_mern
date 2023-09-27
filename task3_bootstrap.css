@@ -1,0 +1,85 @@
+.top{
+    padding: 10px;
+    border-bottom: 1px solid white;
+    box-shadow: 2px 2px 5px rgb(136, 136, 128);
+    border-style: groove;
+    
+}
+.mid{
+    padding-top: 30px;
+    margin-left: 500px;
+}
+.mid1{
+    margin-left: 300px;
+    text-align: center;
+}
+#sub{
+    margin-left:250px;
+    
+}
+#topbox{
+    text-align: center;
+    border: 1px solid rgb(168, 160, 160);
+    width: 255px;
+    height: 30px;
+    margin-left:-13px;
+    background-color: rgb(235, 233, 233);
+    padding-bottom: 30px;
+    box-shadow: 2px 2px 2px rgb(235, 233, 233), -2px -2px 2px rgb(235, 233, 233)    ;
+}
+#box22{
+    text-align: center;
+    padding: 3px;
+}
+.box{
+    border: 1px solid rgb(166, 163, 163);
+    margin-right: 12px;
+}
+.box3{
+    text-align: center;
+    padding: 12px;
+}
+.box4{
+    text-align: center;
+    padding: 12px;
+}
+#dollars{
+    color:rgb(171, 168, 168);
+}
+#midd{
+    padding-left:50px;
+}
+#flink{
+    border: 2px solid blue;
+    padding: 2px 45px 3px 45px;
+    border-radius:6px;
+}
+#slink{
+    border: 2px solid blue;
+    padding: 2px 45px 3px 45px;
+    border-radius:6px;
+    color: white;
+    background-color: rgb(23, 23, 243);
+}
+#signup{
+    
+    border: 1px solid blue;
+    width: fit-content;
+    padding-bottom: 2px;
+    content:blue;
+    
+}
+a:not(#signup){
+    text-decoration: none;
+    color:black;
+
+}
+.Ffeat{
+    color:rgb(145, 141, 141);
+    padding-bottom:5px;
+    margin-left: 100px;
+    width: fit-content;
+}
+.Ff{
+    margin-left: 20px;
+}
