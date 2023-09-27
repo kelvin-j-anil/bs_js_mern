@@ -36,11 +36,11 @@ hr{
     
 }
 #topbox1{
-    background-image: url("/man-guy-hoodie-sweater.jpg");
+    background-image: URL("./man-guy-hoodie-sweater.jpg");
     background-size:cover;
 }
 #topbox2{
-    background-image: url("/under-the-sea.jpg");
+    background-image: URL("./under-the-sea.jpg");
     background-size: cover;
 }
 .midbox{
