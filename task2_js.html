@@ -4,7 +4,7 @@
     <title>js2</title>
 </head>
 <body>
-    <h1>Sort Characters in Alphabetical Order</h1>
+    <h1>Sort All Letters in Alphabetical Order</h1>
     <p>Enter a string to sort:</p>
     <input type="text" id="inputString">
     <button onclick="sortAlphabetically()">Sort</button>
@@ -16,8 +16,24 @@
             const inputElement = document.getElementById('inputString');
             const inputString = inputElement.value;
 
-            // Convert the string to an array of characters, sort it, and join it back to a string
-            const sortedString = inputString.split('').sort().join('');
+            // Split the string into an array of characters
+            const charArray = inputString.split('');
+
+            // Sort the array in alphabetical order (case-insensitive)
+            charArray.sort(function (a, b) {
+                const char1 = a.toLowerCase();
+                const char2 = b.toLowerCase();
+                if (char1 < char2) {
+                    return -1;
+                } else if (char1 > char2) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            });
+
+            // Join the sorted array back into a string
+            const sortedString = charArray.join('');
 
             // Display the sorted string
             const resultElement = document.getElementById('result');
